@@ -1,0 +1,9 @@
+*.pyc
+\#*
+*~
+*.db
+venv
+
+backup/
+#I put database imports/exports/backups here
+*.dump

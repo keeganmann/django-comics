@@ -1,0 +1,14 @@
+<html>
+<head>
+</head>
+<body>
+	<h1>{{comic.title}}</h1>
+	{% if comic.newer_id %}
+		<a href="/{{comic.newer_id}}">&larr;newer</a>
+	{% endif %}
+	{% if comic.newer_id %}
+		<a href="{{comic.older_id}}">older&rarr;</a><br/>
+	{% endif %}
+	<img src="{{comic.imgurl}}" />
+</body>
+</html>
