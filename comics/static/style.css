@@ -19,6 +19,16 @@ img{
   margin-right: auto;
   display: block;
 }
+img.extlink{
+  float:right;
+  opacity:0.5;
+  padding:0px;
+  padding-right:10px;
+  margin:0px;
+}
+img.extlink:hover{
+  opacity:1.0;
+}
 body{
   padding: 0px;
   margin: 0px;

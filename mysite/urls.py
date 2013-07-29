@@ -17,5 +17,6 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^(?P<number>\d+)$', comics.views.view_comic),
+    url(r'^(?P<number>\d+)/$', comics.views.view_comic),
     url(r'^$', comics.views.view_comic),
 )
