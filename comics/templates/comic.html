@@ -22,10 +22,10 @@
 	<a href="http://comics.keeganmann.com/"><h1>COMICS.KEEGANMANN.COM</h1></a>
 	<p>
 	{% if comic.newer_id %}
-		<a href="/{{comic.newer_id}}">&larr;newer</a>
+		<a href="/{{comic.newer_id}}/">&larr;newer</a>
 	{% endif %}
 	{% if comic.older_id %}
-		<a href="{{comic.older_id}}">older&rarr;</a>
+		<a href="/{{comic.older_id}}/">older&rarr;</a>
 	{% endif %}
 	</p>
 	<p>
@@ -40,6 +40,9 @@
       </a>
       <a href="http://imgur.com/a/v1AJK">
         <img src="http://i.imgur.com/JZkseuy.png" class=extlink />
+      </a>
+      <a href="">
+        <img src="http://i.imgur.com/Dv4e1Du.png" class=extlink />
       </a>
    By Peter Dotti & Keegan Mann.<br/>
    Brought to you by <a href="http://keeganmann.com">keeganmann.com</a>.
