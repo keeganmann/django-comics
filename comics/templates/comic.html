@@ -6,50 +6,54 @@
   <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
 <body>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-33034289-1']);
-  _gaq.push(['_setDomainName', 'keeganmann.com']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-	<a href="http://comics.keeganmann.com/"><h1>COMICS.KEEGANMANN.COM</h1></a>
-	<p>
-	{% if comic.newer_id %}
-		<a href="/{{comic.newer_id}}/">&larr;newer</a>
-	{% endif %}
-	{% if comic.older_id %}
-		<a href="/{{comic.older_id}}/">older&rarr;</a>
-	{% endif %}
-	</p>
-	<p>
-	<img src="{{comic.imgurl}}" />
-	</p>
+  <a href="http://comics.keeganmann.com/"><h1>COMICS.KEEGANMANN.COM</h1></a>
+  <p>
+    {% if comic.newer_id %}
+      <a href="/">&larr;newest</a>
+      <a href="/{{comic.newer_id}}/">&larr;newer</a>
+    {% endif %}
+    {% if comic.older_id %}
+      <a href="/{{comic.older_id}}/">older&rarr;</a>
+      <a href="/1/">oldest&rarr;</a>
+    {% endif %}
+  </p>
+  <p>
+    <img src="{{comic.imgurl}}" />
+  </p>
   <p class=date>{{ comic.publish_date }}</p>
-	  <div class="bottom">
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
-        <img alt="Creative Commons License" style="border-width:0;float:left;padding:0px 10px;opacity: 0.5;" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" />
-      </a>
-      <a href="https://github.com/keeganmann/comics">
-        <img src="http://i.imgur.com/GP01qTA.png" class=extlink style="margin-right:15px;" />
-      </a>
-      <a href="http://imgur.com/a/v1AJK">
-        <img src="http://i.imgur.com/JZkseuy.png" class=extlink />
-      </a>
-      <a href="http://www.facebook.com/pages/comicskeeganmanncom/">
-        <img src="http://i.imgur.com/Dv4e1Du.png" class=extlink />
-      </a>
-      <a href="http://tepsilon.tumblr.com/">
-        <img src="http://i.imgur.com/GHxJKtj.png" class=extlink />
-      </a>
-   By Peter Dotti &amp; Keegan Mann.<br/>
-   Brought to you by <a href="http://keeganmann.com">keeganmann.com</a>.
+  <div class="bottom">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+      <img alt="Creative Commons License" style="border-width:0;float:left;padding:0px 10px;opacity: 0.5;" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" />
+    </a>
+    <a href="https://github.com/keeganmann/comics">
+      <img src="http://i.imgur.com/GP01qTA.png" class=extlink style="margin-right:15px;" />
+    </a>
+    <a href="http://imgur.com/a/v1AJK">
+      <img src="http://i.imgur.com/JZkseuy.png" class=extlink />
+    </a>
+    <a href="http://www.facebook.com/pages/comicskeeganmanncom/">
+      <img src="http://i.imgur.com/Dv4e1Du.png" class=extlink />
+    </a>
+    <a href="http://tepsilon.tumblr.com/">
+      <img src="http://i.imgur.com/GHxJKtj.png" class=extlink />
+    </a>
+    By Peter Dotti &amp; Keegan Mann.<br/>
+    Brought to you by <a href="http://www.keeganmann.com">keeganmann.com</a>.
   </div>
+
+  <!-- GOOGLE ANALYTICS -->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33034289-1']);
+    _gaq.push(['_setDomainName', 'keeganmann.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 </body>
 </html>

@@ -4,7 +4,8 @@ from models import Comic
 
 def view_comic(request, number=None):
     if number == None:
-        number = Comic.objects.order_by('-id')[0].id
+        latestid = Comic.objects.order_by('-id')[0].id
+        number = latestid
     variables = RequestContext(request, {'comic': get_object_or_404(Comic, id=number)})
     response = render_to_response('comic.html', variables)
     return response
